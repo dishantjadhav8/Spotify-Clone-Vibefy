@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ed Sheeran - Vibefy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="artist-style.css">
+</head>
+<body>
+    <div class="navbar-header">
+        <img src="../vibefy_logo.png" class="logo-mini">
+    </div>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../tempo.html"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.apple.com/apple-music/"><i class="fa-solid fa-music"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="search-wrapper me-2">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input id="navbarSearchInput" class="form-control" type="search" placeholder="Search">
+                    </div>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button id="logoutBtn" class="login-button" style="text-decoration: none; border: none;">Logout</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="parent">
+        <div class="menu">
+            <div class="container_mm">
+                <div class="row_mm-1">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td><img src="../home.png" class="home"></td>
+                            <td><a href="../tempo.html"><p><b> Home </b></p></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row_mm-2" id="menuSearchBtn">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td><img src="../search.png" class="search"></td>
+                            <td><p><b> Search </b></p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row_mm-3">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td><img src="../library.jpg" class="library"></td>
+                            <td><a href="../library.html"><p><b> Library </b></p></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="container_sm">
+                <div class="row_sm-1" id="createPlaylistBtn">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td><img src="../create playlist.jpg" class="playlist"></td>
+                            <td><p><b> Create Playlist </b></p></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="scroll-container">
+                <p class="playlist-title">Your Playlists</p>
+                <p>Daily Mix 1</p>
+                <p>Chill Vibes</p>
+                <p>Workout Beats</p>
+                <p>Jazz Classics</p>
+                <p>Party Hits</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="main-content">
+                <button class="back-button" onclick="window.location.href='../library.html'">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Library
+                </button>
+                
+                <div class="artist-header">
+                    <img src="data:image/jpeg;base64,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" alt="Ed Sheeran" class="artist-header-image">
+                    <div class="artist-header-info">
+                        <p class="artist-verified"><i class="fa-solid fa-circle-check"></i> Verified Artist</p>
+                        <h1 class="artist-name">Ed Sheeran</h1>
+                        <p class="artist-stats">67.3M monthly listeners</p>
+                    </div>
+                </div>
+
+                <div class="artist-actions">
+                    <button class="btn-play-artist" id="playAllBtn"><i class="fa-solid fa-play"></i> Play</button>
+                    <button class="btn-follow-artist">Follow</button>
+                </div>
+
+                <h2 style="margin: 40px 0 20px 0; color: white; font-size: 24px; font-weight: bold;">Popular</h2>
+
+                <div class="songs-list">
+                    <div class="song-item" data-song="../songs/ed sharren/SpotiDown.App - Shape of You - Ed Sheeran.mp3" data-cover="../songs/ed sharren/SpotiDown.App - Shape of You - Ed Sheeran.jpeg">
+                        <span class="song-number">1</span>
+                        <img src="../songs/ed sharren/SpotiDown.App - Shape of You - Ed Sheeran.jpeg" alt="Shape of You" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Shape of You</div>
+                            <div class="song-artist">Ed Sheeran</div>
+                        </div>
+                        <span class="song-plays">3,543,210,987</span>
+                        <span class="song-duration">3:53</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="song-item" data-song="../songs/ed sharren/SpotiDown.App - Perfect - Ed Sheeran.mp3" data-cover="../songs/ed sharren/SpotiDown.App - Perfect - Ed Sheeran.jpeg">
+                        <span class="song-number">2</span>
+                        <img src="../songs/ed sharren/SpotiDown.App - Perfect - Ed Sheeran.jpeg" alt="Perfect" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Perfect</div>
+                            <div class="song-artist">Ed Sheeran</div>
+                        </div>
+                        <span class="song-plays">2,987,654,321</span>
+                        <span class="song-duration">4:23</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="song-item" data-song="../songs/ed sharren/SpotiDown.App - Thinking out Loud - Ed Sheeran.mp3" data-cover="../songs/ed sharren/SpotiDown.App - Thinking out Loud - Ed Sheeran.jpeg">
+                        <span class="song-number">3</span>
+                        <img src="../songs/ed sharren/SpotiDown.App - Thinking out Loud - Ed Sheeran.jpeg" alt="Thinking Out Loud" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Thinking Out Loud</div>
+                            <div class="song-artist">Ed Sheeran</div>
+                        </div>
+                        <span class="song-plays">2,654,321,098</span>
+                        <span class="song-duration">4:41</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="song-item" data-song="../songs/ed sharren/SpotiDown.App - Photograph - Ed Sheeran.mp3" data-cover="../songs/ed sharren/SpotiDown.App - Photograph - Ed Sheeran.jpeg">
+                        <span class="song-number">4</span>
+                        <img src="../songs/ed sharren/SpotiDown.App - Photograph - Ed Sheeran.jpeg" alt="Photograph" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Photograph</div>
+                            <div class="song-artist">Ed Sheeran</div>
+                        </div>
+                        <span class="song-plays">1,876,543,210</span>
+                        <span class="song-duration">4:19</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="song-item" data-song="../songs/ed sharren/SpotiDown.App - The A Team - Ed Sheeran.mp3" data-cover="../songs/ed sharren/SpotiDown.App - The A Team - Ed Sheeran.jpeg">
+                        <span class="song-number">5</span>
+                        <img src="../songs/ed sharren/SpotiDown.App - The A Team - Ed Sheeran.jpeg" alt="The A Team" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">The A Team</div>
+                            <div class="song-artist">Ed Sheeran</div>
+                        </div>
+                        <span class="song-plays">1,543,210,987</span>
+                        <span class="song-duration">4:18</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <audio id="audioPlayer"></audio>
+    
+    <div class="spotify-player">
+        <div class="player-left">
+            <img id="playerAlbumArt" src="../songs/edsheeran/cover1.jpg" alt="Now Playing" class="player-album-art">
+            <div class="player-track-info">
+                <div class="player-track-name" id="playerTrackName">Select a song</div>
+                <div class="player-artist-name" id="playerArtistName">Ed Sheeran</div>
+            </div>
+            <button class="player-like-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+        
+        <div class="player-center">
+            <div class="player-controls">
+                <button class="player-control-btn"><i class="fa-solid fa-shuffle"></i></button>
+                <button class="player-control-btn" id="playerPrevBtn"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="player-control-btn player-play-btn" id="playerPlayBtn"><i class="fa-solid fa-play"></i></button>
+                <button class="player-control-btn" id="playerNextBtn"><i class="fa-solid fa-forward-step"></i></button>
+                <button class="player-control-btn"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="player-progress-container">
+                <span class="player-time-current" id="playerCurrentTime">0:00</span>
+                <div class="player-progress-bar" id="playerProgressBar">
+                    <div class="player-progress-fill" id="playerProgressFill"></div>
+                </div>
+                <span class="player-time-total" id="playerTotalTime">0:00</span>
+            </div>
+        </div>
+        
+        <div class="player-right">
+            <button class="player-control-btn"><i class="fa-solid fa-list"></i></button>
+            <button class="player-control-btn"><i class="fa-solid fa-computer"></i></button>
+            <div class="player-volume-container">
+                <button class="player-control-btn" id="playerVolumeBtn"><i class="fa-solid fa-volume-high"></i></button>
+                <div class="player-volume-bar" id="playerVolumeBar">
+                    <div class="player-volume-fill" id="playerVolumeFill"></div>
+                </div>
+            </div>
+            <button class="player-control-btn"><i class="fa-solid fa-maximize"></i></button>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="playlistModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Playlist</h2>
+                <p>Give your playlist a name and description</p>
+            </div>
+            <div class="modal-body">
+                <form id="createPlaylistForm">
+                    <div class="form-group">
+                        <label for="playlistName">Playlist Name</label>
+                        <input type="text" id="playlistName" placeholder="My Awesome Playlist" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="playlistDescription">Description (Optional)</label>
+                        <textarea id="playlistDescription" placeholder="Add a description for your playlist"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn modal-btn-cancel" id="cancelBtn">Cancel</button>
+                <button class="modal-btn modal-btn-create" id="submitBtn">Create</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="artist-player.js"></script>
+</body>
+</html>

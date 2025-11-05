@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Weeknd - Vibefy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="artist-style.css">
+</head>
+<body>
+    <!-- Navbar header (left side with logo) -->
+    <div class="navbar-header">
+        <img src="../vibefy_logo.png" class="logo-mini">
+    </div>
+    
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../tempo.html"><i class="fa-solid fa-house"></i></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://www.apple.com/apple-music/"><i class="fa-solid fa-music"></i></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <div class="spotify-search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="navbarSearchInput" type="search" placeholder="What do you want to listen to?" aria-label="Search"/>
+                </div>
+                <button id="logoutBtn" class="login-button" style="text-decoration: none; border: none;">Logout</button>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+    
+    <div class="parent">
+        <div class="menu">
+            <div class="container_mm">
+                <div class="row_mm-1">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td>
+                                <img src="../home.png" class="home">
+                            </td>
+                            <td>
+                                <a href="../tempo.html"><p><b> Home </b></p></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row_mm-2" id="menuSearchBtn">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td>
+                                <img src="../search.png" class="search">
+                            </td>
+                            <td>
+                                <p><b> Search </b></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row_mm-3 active">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td>
+                                <img src="../library.jpg" class="library">
+                            </td>
+                            <td>
+                                <a href="../library.html"><p><b> Library </b></p></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <hr></hr>
+            <div class="container_sm">
+                <div class="row_sm-1" id="createPlaylistBtn">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td>
+                                <img src="../create playlist.jpg" class="playlist">
+                            </td>
+                            <td>
+                                <p><b> Create Playlist </b></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <hr></hr>
+            <div class="scroll-container">
+                <p class="playlist-title">Your Playlists</p>
+                <p>Daily Mix 1</p>
+                <p>Chill Vibes</p>
+                <p>Workout Beats</p>
+                <p>Jazz Classics</p>
+                <p>Party Hits</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="main-content">
+                <!-- Back Button -->
+                <button class="back-button" onclick="window.location.href='../library.html'" style="position: absolute; top: 20px; left: 20px; z-index: 100;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Library
+                </button>
+                
+                <!-- Artist Header -->
+                <div class="artist-header">
+                    <img src="https://i.scdn.co/image/ab6761610000e5eb214f3cf1cbe7139c1e26ffbb" alt="The Weeknd" class="artist-header-image">
+                    <div class="artist-header-info">
+                        <p class="artist-verified"><i class="fa-solid fa-circle-check"></i> Verified Artist</p>
+                        <h1 class="artist-name">The Weeknd</h1>
+                        <p class="artist-stats">92.4M monthly listeners</p>
+                    </div>
+                </div>
+
+                <div class="artist-actions">
+                    <button class="btn-play-artist" id="playAllBtn"><i class="fa-solid fa-play"></i> Play</button>
+                    <button class="btn-follow-artist">Follow</button>
+                </div>
+
+                <h2 style="margin: 40px 0 20px 0; color: white; font-size: 24px; font-weight: bold;">Popular</h2>
+
+                <div class="songs-list">
+                    <!-- Song 1: Blinding Lights -->
+                    <div class="song-item" data-song="../songs/weekend/SpotiDownloader.com - Blinding Lights - The Weeknd.mp3" data-cover="../songs/weekend/Cover of Blinding Lights by The Weeknd.jpg">
+                        <span class="song-number">1</span>
+                        <img src="../songs/weekend/Cover of Blinding Lights by The Weeknd.jpg" alt="Blinding Lights" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Blinding Lights</div>
+                            <div class="song-artist">The Weeknd</div>
+                        </div>
+                        <span class="song-plays">3,821,045,382</span>
+                        <span class="song-duration">3:20</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <!-- Song 2: Die For You -->
+                    <div class="song-item" data-song="../songs/weekend/SpotiDownloader.com - Die For You - The Weeknd.mp3" data-cover="../songs/weekend/Cover of Die For You by The Weeknd.jpg">
+                        <span class="song-number">2</span>
+                        <img src="../songs/weekend/Cover of Die For You by The Weeknd.jpg" alt="Die For You" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Die For You</div>
+                            <div class="song-artist">The Weeknd</div>
+                        </div>
+                        <span class="song-plays">2,156,789,234</span>
+                        <span class="song-duration">4:20</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <!-- Song 3: One Of The Girls -->
+                    <div class="song-item" data-song="../songs/weekend/SpotiDownloader.com - One Of The Girls (with JENNIE, Lily Rose Depp) - The Weeknd.mp3" data-cover="../songs/weekend/Cover of One Of The Girls (with JENNIE, Lily Rose Depp) by The Weeknd, JENNIE, Lily-Rose Depp.jpg">
+                        <span class="song-number">3</span>
+                        <img src="../songs/weekend/Cover of One Of The Girls (with JENNIE, Lily Rose Depp) by The Weeknd, JENNIE, Lily-Rose Depp.jpg" alt="One Of The Girls" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">One Of The Girls (with JENNIE, Lily Rose Depp)</div>
+                            <div class="song-artist">The Weeknd, JENNIE, Lily-Rose Depp</div>
+                        </div>
+                        <span class="song-plays">1,345,678,901</span>
+                        <span class="song-duration">4:04</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <!-- Song 4: Starboy -->
+                    <div class="song-item" data-song="../songs/weekend/SpotiDownloader.com - Starboy - The Weeknd.mp3" data-cover="../songs/weekend/Cover of Starboy by The Weeknd, Daft Punk.jpg">
+                        <span class="song-number">4</span>
+                        <img src="../songs/weekend/Cover of Starboy by The Weeknd, Daft Punk.jpg" alt="Starboy" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Starboy</div>
+                            <div class="song-artist">The Weeknd, Daft Punk</div>
+                        </div>
+                        <span class="song-plays">3,234,567,890</span>
+                        <span class="song-duration">3:50</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <!-- Song 5: Timeless -->
+                    <div class="song-item" data-song="../songs/weekend/SpotiDownloader.com - Timeless (feat Playboi Carti) - The Weeknd.mp3" data-cover="../songs/weekend/Cover of Timeless (with Playboi Carti) by The Weeknd, Playboi Carti.jpg">
+                        <span class="song-number">5</span>
+                        <img src="../songs/weekend/Cover of Timeless (with Playboi Carti) by The Weeknd, Playboi Carti.jpg" alt="Timeless" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Timeless (feat Playboi Carti)</div>
+                            <div class="song-artist">The Weeknd, Playboi Carti</div>
+                        </div>
+                        <span class="song-plays">892,456,123</span>
+                        <span class="song-duration">4:16</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hidden Audio Player -->
+    <audio id="audioPlayer"></audio>
+    
+    <!-- Spotify-Style Music Player -->
+    <div class="spotify-player">
+        <div class="player-left">
+            <img id="playerAlbumArt" src="https://i.scdn.co/image/ab6761610000e5eb214f3cf1cbe7139c1e26ffbb" alt="Now Playing" class="player-album-art">
+            <div class="player-track-info">
+                <div class="player-track-name" id="playerTrackName">Select a song</div>
+                <div class="player-artist-name" id="playerArtistName">The Weeknd</div>
+            </div>
+            <button class="player-like-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+        
+        <div class="player-center">
+            <div class="player-controls">
+                <button class="player-control-btn"><i class="fa-solid fa-shuffle"></i></button>
+                <button class="player-control-btn" id="playerPrevBtn"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="player-control-btn player-play-btn" id="playerPlayBtn"><i class="fa-solid fa-play"></i></button>
+                <button class="player-control-btn" id="playerNextBtn"><i class="fa-solid fa-forward-step"></i></button>
+                <button class="player-control-btn"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="player-progress-container">
+                <span class="player-time-current" id="playerCurrentTime">0:00</span>
+                <div class="player-progress-bar" id="playerProgressBar">
+                    <div class="player-progress-fill" id="playerProgressFill"></div>
+                </div>
+                <span class="player-time-total" id="playerTotalTime">0:00</span>
+            </div>
+        </div>
+        
+        <div class="player-right">
+            <button class="player-control-btn"><i class="fa-solid fa-list"></i></button>
+            <button class="player-control-btn"><i class="fa-solid fa-computer"></i></button>
+            <div class="player-volume-container">
+                <button class="player-control-btn" id="playerVolumeBtn"><i class="fa-solid fa-volume-high"></i></button>
+                <div class="player-volume-bar" id="playerVolumeBar">
+                    <div class="player-volume-fill" id="playerVolumeFill"></div>
+                </div>
+            </div>
+            <button class="player-control-btn"><i class="fa-solid fa-maximize"></i></button>
+        </div>
+    </div>
+
+    <!-- Create Playlist Modal -->
+    <div class="modal-overlay" id="playlistModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Playlist</h2>
+                <p>Give your playlist a name and description</p>
+            </div>
+            <div class="modal-body">
+                <form id="createPlaylistForm">
+                    <div class="form-group">
+                        <label for="playlistName">Playlist Name</label>
+                        <input type="text" id="playlistName" placeholder="My Awesome Playlist" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="playlistDescription">Description (Optional)</label>
+                        <textarea id="playlistDescription" placeholder="Add a description for your playlist"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn modal-btn-cancel" id="cancelBtn">Cancel</button>
+                <button class="modal-btn modal-btn-create" id="submitBtn">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Player -->
+    <audio id="audioPlayer"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = sessionStorage.getItem('userLoggedIn');
+            
+            if (!isLoggedIn) {
+                window.location.href = '../vibefy_login.html';
+                return;
+            }
+
+            // Logout functionality
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function() {
+                    sessionStorage.removeItem('userLoggedIn');
+                    window.location.href = '../vibefy_login.html';
+                });
+            }
+
+            // Playlist modal functionality
+            const createPlaylistBtn = document.getElementById('createPlaylistBtn');
+            const playlistModal = document.getElementById('playlistModal');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            const playlistNameInput = document.getElementById('playlistName');
+            const playlistDescriptionInput = document.getElementById('playlistDescription');
+
+            createPlaylistBtn.addEventListener('click', function() {
+                playlistModal.classList.add('active');
+                playlistNameInput.focus();
+            });
+
+            cancelBtn.addEventListener('click', function() {
+                playlistModal.classList.remove('active');
+                playlistNameInput.value = '';
+                playlistDescriptionInput.value = '';
+            });
+
+            playlistModal.addEventListener('click', function(e) {
+                if (e.target === playlistModal) {
+                    playlistModal.classList.remove('active');
+                    playlistNameInput.value = '';
+                    playlistDescriptionInput.value = '';
+                }
+            });
+
+            submitBtn.addEventListener('click', function() {
+                const playlistName = playlistNameInput.value.trim();
+                
+                if (playlistName) {
+                    const scrollContainer = document.querySelector('.scroll-container');
+                    const newPlaylist = document.createElement('p');
+                    newPlaylist.textContent = playlistName;
+                    scrollContainer.appendChild(newPlaylist);
+                    
+                    playlistModal.classList.remove('active');
+                    playlistNameInput.value = '';
+                    playlistDescriptionInput.value = '';
+                }
+            });
+
+            // Audio Player Functionality
+            const audioPlayer = document.getElementById('audioPlayer');
+            const songItems = document.querySelectorAll('.song-item');
+            let currentSongItem = null;
+            let songsArray = Array.from(songItems);
+            let currentSongIndex = -1;
+            
+            const playerAlbumArt = document.getElementById('playerAlbumArt');
+            const playerTrackName = document.getElementById('playerTrackName');
+            const playerArtistName = document.getElementById('playerArtistName');
+            const playerPlayBtn = document.getElementById('playerPlayBtn');
+            const playerPrevBtn = document.getElementById('playerPrevBtn');
+            const playerNextBtn = document.getElementById('playerNextBtn');
+            const playerCurrentTime = document.getElementById('playerCurrentTime');
+            const playerTotalTime = document.getElementById('playerTotalTime');
+            const playerProgressBar = document.getElementById('playerProgressBar');
+            const playerProgressFill = document.getElementById('playerProgressFill');
+            const playerVolumeBar = document.getElementById('playerVolumeBar');
+            const playerVolumeFill = document.getElementById('playerVolumeFill');
+            const playerVolumeBtn = document.getElementById('playerVolumeBtn');
+            const playAllBtn = document.getElementById('playAllBtn');
+            
+            function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return mins + ':' + (secs < 10 ? '0' : '') + secs;
+            }
+            
+            function updatePlayerUI(songItem) {
+                const coverPath = songItem.getAttribute('data-cover');
+                const songTitle = songItem.querySelector('.song-title').textContent;
+                const songArtist = songItem.querySelector('.song-artist').textContent;
+                
+                playerAlbumArt.src = coverPath;
+                playerTrackName.textContent = songTitle;
+                playerArtistName.textContent = songArtist;
+            }
+            
+            function playSong(songItem, index) {
+                const songPath = songItem.getAttribute('data-song');
+                
+                if (currentSongItem) {
+                    currentSongItem.classList.remove('playing');
+                    const prevBtn = currentSongItem.querySelector('.song-play-btn');
+                    prevBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                }
+                
+                audioPlayer.src = songPath;
+                audioPlayer.play();
+                songItem.classList.add('playing');
+                const playBtn = songItem.querySelector('.song-play-btn');
+                playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                playerPlayBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                
+                currentSongItem = songItem;
+                currentSongIndex = index;
+                updatePlayerUI(songItem);
+            }
+            
+            function togglePlayPause() {
+                if (audioPlayer.paused) {
+                    if (currentSongItem) {
+                        audioPlayer.play();
+                        playerPlayBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                        const playBtn = currentSongItem.querySelector('.song-play-btn');
+                        playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                    } else {
+                        playSong(songsArray[0], 0);
+                    }
+                } else {
+                    audioPlayer.pause();
+                    playerPlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                    if (currentSongItem) {
+                        const playBtn = currentSongItem.querySelector('.song-play-btn');
+                        playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                    }
+                }
+            }
+            
+            songItems.forEach(function(songItem, index) {
+                const playBtn = songItem.querySelector('.song-play-btn');
+                
+                playBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    if (currentSongItem === songItem && !audioPlayer.paused) {
+                        audioPlayer.pause();
+                        playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                        playerPlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                        songItem.classList.remove('playing');
+                        return;
+                    }
+                    
+                    playSong(songItem, index);
+                });
+                
+                songItem.addEventListener('click', function() {
+                    playBtn.click();
+                });
+            });
+            
+            if (playAllBtn) {
+                playAllBtn.addEventListener('click', function() {
+                    playSong(songsArray[0], 0);
+                });
+            }
+            
+            playerPlayBtn.addEventListener('click', togglePlayPause);
+            
+            playerPrevBtn.addEventListener('click', function() {
+                if (currentSongIndex > 0) {
+                    playSong(songsArray[currentSongIndex - 1], currentSongIndex - 1);
+                }
+            });
+            
+            playerNextBtn.addEventListener('click', function() {
+                if (currentSongIndex < songsArray.length - 1) {
+                    playSong(songsArray[currentSongIndex + 1], currentSongIndex + 1);
+                }
+            });
+            
+            audioPlayer.addEventListener('ended', function() {
+                if (currentSongItem) {
+                    currentSongItem.classList.remove('playing');
+                    const playBtn = currentSongItem.querySelector('.song-play-btn');
+                    playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                    playerPlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                }
+                if (currentSongIndex < songsArray.length - 1) {
+                    playSong(songsArray[currentSongIndex + 1], currentSongIndex + 1);
+                }
+            });
+            
+            audioPlayer.addEventListener('timeupdate', function() {
+                if (audioPlayer.duration) {
+                    const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                    playerProgressFill.style.width = progress + '%';
+                    playerCurrentTime.textContent = formatTime(audioPlayer.currentTime);
+                }
+            });
+            
+            audioPlayer.addEventListener('loadedmetadata', function() {
+                playerTotalTime.textContent = formatTime(audioPlayer.duration);
+            });
+            
+            let isSeekingProgress = false;
+            
+            playerProgressBar.addEventListener('mousedown', function(e) {
+                isSeekingProgress = true;
+                playerProgressBar.classList.add('seeking');
+                seekToPosition(e);
+            });
+            
+            document.addEventListener('mousemove', function(e) {
+                if (isSeekingProgress) {
+                    seekToPosition(e);
+                }
+            });
+            
+            document.addEventListener('mouseup', function() {
+                if (isSeekingProgress) {
+                    isSeekingProgress = false;
+                    playerProgressBar.classList.remove('seeking');
+                }
+            });
+            
+            function seekToPosition(e) {
+                if (audioPlayer.duration) {
+                    const rect = playerProgressBar.getBoundingClientRect();
+                    let percent = (e.clientX - rect.left) / rect.width;
+                    percent = Math.max(0, Math.min(1, percent));
+                    audioPlayer.currentTime = percent * audioPlayer.duration;
+                }
+            }
+            
+            let isAdjustingVolume = false;
+            audioPlayer.volume = 0.7;
+            playerVolumeFill.style.width = '70%';
+            
+            playerVolumeBar.addEventListener('mousedown', function(e) {
+                isAdjustingVolume = true;
+                playerVolumeBar.classList.add('adjusting');
+                setVolume(e);
+            });
+            
+            document.addEventListener('mousemove', function(e) {
+                if (isAdjustingVolume) {
+                    setVolume(e);
+                }
+            });
+            
+            document.addEventListener('mouseup', function() {
+                if (isAdjustingVolume) {
+                    isAdjustingVolume = false;
+                    playerVolumeBar.classList.remove('adjusting');
+                }
+            });
+            
+            function setVolume(e) {
+                const rect = playerVolumeBar.getBoundingClientRect();
+                let percent = (e.clientX - rect.left) / rect.width;
+                percent = Math.max(0, Math.min(1, percent));
+                audioPlayer.volume = percent;
+                playerVolumeFill.style.width = (percent * 100) + '%';
+                
+                if (percent === 0) {
+                    playerVolumeBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+                } else if (percent < 0.5) {
+                    playerVolumeBtn.innerHTML = '<i class="fa-solid fa-volume-low"></i>';
+                } else {
+                    playerVolumeBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+                }
+            }
+            
+            let previousVolume = 0.7;
+            playerVolumeBtn.addEventListener('click', function() {
+                if (audioPlayer.volume > 0) {
+                    previousVolume = audioPlayer.volume;
+                    audioPlayer.volume = 0;
+                    playerVolumeFill.style.width = '0%';
+                    playerVolumeBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+                } else {
+                    audioPlayer.volume = previousVolume;
+                    playerVolumeFill.style.width = (previousVolume * 100) + '%';
+                    if (previousVolume < 0.5) {
+                        playerVolumeBtn.innerHTML = '<i class="fa-solid fa-volume-low"></i>';
+                    } else {
+                        playerVolumeBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

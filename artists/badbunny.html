@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bad Bunny - Vibefy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="artist-style.css">
+</head>
+<body>
+    <div class="navbar-header">
+        <img src="../vibefy_logo.png" class="logo-mini">
+    </div>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../tempo.html"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.apple.com/apple-music/"><i class="fa-solid fa-music"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="search-wrapper me-2">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input id="navbarSearchInput" class="form-control" type="search" placeholder="Search">
+                    </div>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button id="logoutBtn" class="login-button" style="text-decoration: none; border: none;">Logout</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="parent">
+        <div class="menu">
+            <div class="container_mm">
+                <div class="row_mm-1">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td><img src="../home.png" class="home"></td>
+                            <td><a href="../tempo.html"><p><b> Home </b></p></a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row_mm-2" id="menuSearchBtn">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td><img src="../search.png" class="search"></td>
+                            <td><p><b> Search </b></p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row_mm-3">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td><img src="../library.jpg" class="library"></td>
+                            <td><a href="../library.html"><p><b> Library </b></p></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="container_sm">
+                <div class="row_sm-1" id="createPlaylistBtn">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td><img src="../create playlist.jpg" class="playlist"></td>
+                            <td><p><b> Create Playlist </b></p></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <div class="scroll-container">
+                <p class="playlist-title">Your Playlists</p>
+                <p>Daily Mix 1</p>
+                <p>Chill Vibes</p>
+                <p>Workout Beats</p>
+                <p>Jazz Classics</p>
+                <p>Party Hits</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="main-content">
+                <button class="back-button" onclick="window.location.href='../library.html'">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Library
+                </button>
+                
+                <div class="artist-header">
+                    <img src="data:image/webp;base64,UklGRu4IAABXRUJQVlA4IOIIAABwLgCdASriAJsAPoVCnUolI6YmpXKZSNAQiWNu4ESdRdHLY9fM/kB7Xts/0v4o5olCHaZPf2/vmw82Poquqw3ofyZtV53W43j4rwZe3Hx4X2HH7lvrB3Vyp1c/UxUnpWY63QjW3HphJfAYBb3LgKg6qbidwmyh/j/6S8Mn7wF/WDFddOUfDa8kXh2xepXD1+cb0pcFsNU92F8/dkx7s5JCbwnPOHae03QRnV4RO6gw81ZbYycSjmVlTENUC/7n5Cxd0ruPB/B+vq+7ImdZ0oZyfZ3lq2EQbznsDmpzp7wfONg4KgIgfm1T/+/qv8xOj85J+JRpmHlnumWCv58wILXO050Xtr8PBzPoXX//OQonmCYcSHIMSgPsFOT9VUeYZgam/Hi69w3pHBsBYNNGrPWAd7ikoleFHU2sc17YDN8hZQj3YMbepMANiVraOvpcc+jy4Mr2h2+3XPiynchuk6Sfa1cvpJLzueQYzbpjHfGJaR2eQMlo9A+1ujWoQAD+7gs//KFTGljQH/2Tb9Jt+k24y3uUli+1xcpKca3+Dk0NRD1G3fuCLLwkkDa1jICXqalLvvC2dTX8/8ioEu8ZNASsaHKMNCYum+vo3Vghx6pgN4p2uEQ6K2dqDfl0QJj/Fxv2GYzE6ZzyB6tAYkphn+KHlFNITbaHhZ0Ggrl88qAUdIyXokao4kDd5gX1RmuHQcK0oyxsRdtCSdd/dyVGOcIwUIoMif7McJ9n1SL+aHDd1MLwOTfAcKCq9MS9+lYcJw4j5Wngy8UGuPh0ANdVITAqiFF/4NILlvCKbTETjAAbY0891idjjWDiBIb/LLo+B73dmlR6QCMXHbis+6MmwpSEpO57KAzi2JybrpB4oGnL6ArijkND79Fz2bGebj76naM8pj99AlfPT8GvSHwxHxMbMOlwVM2BxSkHS+CfeFxJhVGNlSPW59BnV4d4cy8hjByvWdtc20Oq4FF4yF3HUg5ssBwKn7gbV7oDdUl1KYlMBEHgRzdvbgTuhp03QnV8AxjUUBGrkd0UJ/VhBIIqKf8dHVqA4uEkN/bfqYF5KcGUrBJ4xS45DsN9J92gFmf/tVXXgnIhP8BFda30vqvR3CPY/rYgHdptKNOVaycgiHvVnvstg5Brt/alDbeT9dui7xZzca5JnXz/ZHhtHzc6CH6sFiVH550nTcH9V9Q9eAK/H4DvljELpyt9AbD0+CepzTWu/tTTWjdu4dhPTSJiSfqqdgn9mENWGQhXuEt8xazb0qZepYwG062+8FNuoNxl2oibNVQBhgb7mrWs7ZmezXgOOU7zltqtDpcSDcaFDi/YXqsARdil+5StLPZpE6+p1bTa8osKtolI6D0qEdakHdD+rG1G0hQMabVG0DYAuMr/ng/al4zOtctbhwA+FprVivOCaU0QV/8NGzChH8wuvCcZfG0pVoqmOocFiPTL+vk4Nc77iDcjVEbsMnbJGBi/n5iSauLAg2ctjMdxq0Q6waRVTd2rW4qL03S7G0WPCFVt5HVL3erZl6ucdp0r9xslRRWCDNbhnPp66TU1bGSKA9xZkLg1KQcsegBJYmL6ECJJicUwl7jnTuOMK9haj6vwQdBrqS2YbW8tZ/LNIscBKmWEIsRIRJJBlcI3cNiyFGXhACRZTWJnA3IBI8E3LdiDkKe+Vec2ZrtEX6ZziyyOuqEQ11Yd7gjTbBEy71mtLhBYMxQtoMq3+CLmdF+3/Xx0wt7PdyU0QMyrNF/OcpTOtqly6ARCfOAj/jnGlUvBgoMxLZkKCtj+qW9mL/P4qrYSjbr4ohu4VE3zBT80vQeTZKPlqSt8wIKJLAgAAGJDPLK6ZAmuFzoGYgOeebxzcHEh3SV8JqlqWMJx8ETuCr171SxLvJkUOl36rfH33wW0lYojuoxhVZ/Sl1iqAp0jxYbwnCjlzHLtl1Uy5tO9Cc0wH7oh0vqCPiU0jAx0whre0ug9aHJWSUx6TbRW32kLzTa3vQG7zN3hkGsPBPT3xk+0AtDwZthrirbkpPopDgSLp8PezuWQygOKw9ngd18/el9vw0e2dT/H1Rfo3g3qJjGHt/AGpDPxeiFrlok3gnQBHRp0xFv7bPEdm8YADWKHoxP0G8/jGSDGe4AI0JyFgAE8OkegfYhpu8hhSSzczJd+f6YRnRiAUW8QCNfbQLdlGQuyuindzfIhVtr0JpivyvZbMfunylTYh3XMI/VdM6USUXcaOOr+o00y3AVEGvKCCTTywrQFJUyf0JweQCfJy5VAGUJZqoI1r1yYXHJvvjMAkw9B0SzkcNuM0u4Ly8TVHyJMcpZGSsI/EFcyJ8DpkdmHmZ5OamZcvnNUcgL8Puj2btsgqEHZ5uNeA7al3lqd+bSfATrKvcTz1+NQmwAJIt3lIGJFXxynnjQV8Bq9zrma6RY1HmBVoxiW/5xLdqMf7PAZ6Au69OPfi6/WQSuNPOLHtp7kBkM5yJpEo78ZWnjN5e3+hBEbCHwq6lq1EAZUiR/SkGDE8qHnzaEOHnm5tTsWpr+hpzq3Np5GZJ+AVUKTOb1hRJ/QON/BTt4F1fo42B0/vUXCBDZYWLFMG+ldrBKhuZ5Dduk288eBbj2HBsA0/kBUsdhvlVnvJCisWck+R4WX0HGW0glDDht5SjFPgQbk7/4NctEay0kYQTCG3W247MrkLbJiAfl3/fjQbxGsYyouTbL5XvQapan0+dkjcdcaMRmvOQByqT2D7tt55RzL8CeavYE7DP6817lNIOwIAKF/epDPZGxLjOMqB/BUJkrwf50DEywr+YnG6I31pEcWCDs1gIDm/YJsF0JmUvl++l9JOOJMfGUNts2I9nIvCcgzxVNEf9Du/UJVgSquXTSFDmGWIlOHDh/dEAUxySx7+dBESpk61V+AtFAokqlhVuJtgmqOGzeRdKtaXm11MF1c7k2DD4lJcch1Ijj2FU1lFr/JItbcN+uuO9OW5iCyKFFdcwX7PSe+/CGgNNyneoXGs137mVhX49jqi/SldNRg7hM0WS0vglTyY/XW/Tv/yUfR8TDOAAA=" alt="Bad Bunny" class="artist-header-image">
+                    <div class="artist-header-info">
+                        <p class="artist-verified"><i class="fa-solid fa-circle-check"></i> Verified Artist</p>
+                        <h1 class="artist-name">Bad Bunny</h1>
+                        <p class="artist-stats">56.1M monthly listeners</p>
+                    </div>
+                </div>
+
+                <div class="artist-actions">
+                    <button class="btn-play-artist" id="playAllBtn"><i class="fa-solid fa-play"></i> Play</button>
+                    <button class="btn-follow-artist">Follow</button>
+                </div>
+
+                <h2 style="margin: 40px 0 20px 0; color: white; font-size: 24px; font-weight: bold;">Popular</h2>
+
+                <div class="songs-list">
+                    <div class="song-item" data-song="../songs/bad bunny/SpotiDown.App - Tití Me Preguntó - Bad Bunny.mp3" data-cover="../songs/bad bunny/SpotiDown.App - Tití Me Preguntó - Bad Bunny.jpeg">
+                        <span class="song-number">1</span>
+                        <img src="../songs/bad bunny/SpotiDown.App - Tití Me Preguntó - Bad Bunny.jpeg" alt="Tití Me Preguntó" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Tití Me Preguntó</div>
+                            <div class="song-artist">Bad Bunny</div>
+                        </div>
+                        <span class="song-plays">1,234,567,890</span>
+                        <span class="song-duration">4:02</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="song-item" data-song="../songs/bad bunny/SpotiDown.App - MIA _feat. Drake_ - Bad Bunny.mp3" data-cover="../songs/bad bunny/SpotiDown.App - MIA _feat. Drake_ - Bad Bunny.jpeg">
+                        <span class="song-number">2</span>
+                        <img src="../songs/bad bunny/SpotiDown.App - MIA _feat. Drake_ - Bad Bunny.jpeg" alt="MIA" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">MIA (feat. Drake)</div>
+                            <div class="song-artist">Bad Bunny, Drake</div>
+                        </div>
+                        <span class="song-plays">987,654,321</span>
+                        <span class="song-duration">3:30</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="song-item" data-song="../songs/bad bunny/SpotiDown.App - DÁKITI - Bad Bunny.mp3" data-cover="../songs/bad bunny/SpotiDown.App - DÁKITI - Bad Bunny.jpeg">
+                        <span class="song-number">3</span>
+                        <img src="../songs/bad bunny/SpotiDown.App - DÁKITI - Bad Bunny.jpeg" alt="DÁKITI" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">DÁKITI</div>
+                            <div class="song-artist">Bad Bunny, Jhay Cortez</div>
+                        </div>
+                        <span class="song-plays">654,321,098</span>
+                        <span class="song-duration">3:25</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="song-item" data-song="../songs/bad bunny/SpotiDown.App - Yo Perreo Sola - Bad Bunny.mp3" data-cover="../songs/bad bunny/SpotiDown.App - Yo Perreo Sola - Bad Bunny.jpeg">
+                        <span class="song-number">4</span>
+                        <img src="../songs/bad bunny/SpotiDown.App - Yo Perreo Sola - Bad Bunny.jpeg" alt="Yo Perreo Sola" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Yo Perreo Sola</div>
+                            <div class="song-artist">Bad Bunny</div>
+                        </div>
+                        <span class="song-plays">543,210,987</span>
+                        <span class="song-duration">2:52</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+
+                    <div class="song-item" data-song="../songs/bad bunny/SpotiDown.App - Un Verano Sin Ti - Bad Bunny.mp3" data-cover="../songs/bad bunny/SpotiDown.App - Un Verano Sin Ti - Bad Bunny.jpeg">
+                        <span class="song-number">5</span>
+                        <img src="../songs/bad bunny/SpotiDown.App - Un Verano Sin Ti - Bad Bunny.jpeg" alt="Un Verano Sin Ti" class="song-cover">
+                        <div class="song-info">
+                            <div class="song-title">Un Verano Sin Ti</div>
+                            <div class="song-artist">Bad Bunny</div>
+                        </div>
+                        <span class="song-plays">432,109,876</span>
+                        <span class="song-duration">2:43</span>
+                        <button class="song-play-btn"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <audio id="audioPlayer"></audio>
+    
+    <div class="spotify-player">
+        <div class="player-left">
+            <img id="playerAlbumArt" src="../songs/badbunny/cover1.jpg" alt="Now Playing" class="player-album-art">
+            <div class="player-track-info">
+                <div class="player-track-name" id="playerTrackName">Select a song</div>
+                <div class="player-artist-name" id="playerArtistName">Bad Bunny</div>
+            </div>
+            <button class="player-like-btn"><i class="fa-regular fa-heart"></i></button>
+        </div>
+        
+        <div class="player-center">
+            <div class="player-controls">
+                <button class="player-control-btn"><i class="fa-solid fa-shuffle"></i></button>
+                <button class="player-control-btn" id="playerPrevBtn"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="player-control-btn player-play-btn" id="playerPlayBtn"><i class="fa-solid fa-play"></i></button>
+                <button class="player-control-btn" id="playerNextBtn"><i class="fa-solid fa-forward-step"></i></button>
+                <button class="player-control-btn"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="player-progress-container">
+                <span class="player-time-current" id="playerCurrentTime">0:00</span>
+                <div class="player-progress-bar" id="playerProgressBar">
+                    <div class="player-progress-fill" id="playerProgressFill"></div>
+                </div>
+                <span class="player-time-total" id="playerTotalTime">0:00</span>
+            </div>
+        </div>
+        
+        <div class="player-right">
+            <button class="player-control-btn"><i class="fa-solid fa-list"></i></button>
+            <button class="player-control-btn"><i class="fa-solid fa-computer"></i></button>
+            <div class="player-volume-container">
+                <button class="player-control-btn" id="playerVolumeBtn"><i class="fa-solid fa-volume-high"></i></button>
+                <div class="player-volume-bar" id="playerVolumeBar">
+                    <div class="player-volume-fill" id="playerVolumeFill"></div>
+                </div>
+            </div>
+            <button class="player-control-btn"><i class="fa-solid fa-maximize"></i></button>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="playlistModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Playlist</h2>
+                <p>Give your playlist a name and description</p>
+            </div>
+            <div class="modal-body">
+                <form id="createPlaylistForm">
+                    <div class="form-group">
+                        <label for="playlistName">Playlist Name</label>
+                        <input type="text" id="playlistName" placeholder="My Awesome Playlist" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="playlistDescription">Description (Optional)</label>
+                        <textarea id="playlistDescription" placeholder="Add a description for your playlist"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn modal-btn-cancel" id="cancelBtn">Cancel</button>
+                <button class="modal-btn modal-btn-create" id="submitBtn">Create</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="artist-player.js"></script>
+</body>
+</html>

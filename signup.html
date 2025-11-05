@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Vibefy - Sign Up </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div class="signup-container">
+            <div class="logo-container">
+                <img src="vibefy_logo.png" alt="Vibefy Logo">
+            </div>
+            
+            <h1 class="signup-title">Create your Vibefy account</h1>
+            <p class="signup-subtitle">Join free and start vibing to your favorites</p>
+            
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="fullName" class="form-label">Full name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        class="form-input" 
+                        placeholder="Your name"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="you@example.com"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-input" 
+                        placeholder="Create a password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm password</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword" 
+                        class="form-input" 
+                        placeholder="Re-enter your password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the Terms and Privacy Policy</label>
+                </div>
+                
+                <button type="submit" class="signup-button-primary">Create account</button>
+            </form>
+            
+            <div class="links-container">
+                <a href="vibefy_login.html" class="link">Already have an account? Log in</a>
+            </div>
+        </div>
+        
+        <script>
+            document.getElementById('signupForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                const fullName = document.getElementById('fullName').value;
+                
+                // Check if passwords match
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+                
+                // Set logged in state
+                sessionStorage.setItem('userLoggedIn', 'true');
+                sessionStorage.setItem('userName', fullName);
+                
+                // Redirect to homepage
+                window.location.href = 'tempo.html';
+            });
+        </script>
+        
+    </body>
+</html>
